@@ -44,6 +44,18 @@ class student
 			{
 				roll_no = a;
 			}
+			void getname()
+			{
+				cout<<name<<endl;
+			}
+			void getage()
+			{
+				cout<<age<<endl;
+			}
+			void getroll_no()
+			{
+				cout<<roll_no<<endl;
+			}
 };
 int main()
 {
@@ -51,9 +63,8 @@ int main()
 	s1.setname("Mohd Azeem");
 	s1.setage(22);
 	s1.setroll_no(12);
-	cout<<"Your name is :"<<s1.name<<endl;
-	cout<<"Your age is :"<<s1.age<<endl;
-	cout<<"Your roll no is :"<<s1.roll_no<<endl;
+	s1.getname();
+	s1.getage();
+	s1.getroll_no();
 	return 0;
 }
-
