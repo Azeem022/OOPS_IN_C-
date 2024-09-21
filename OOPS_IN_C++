@@ -63,6 +63,7 @@ int main()
 	s1.setname("Mohd Azeem");
 	s1.setage(22);
 	s1.setroll_no(12);
+// FUNCTION CALL
 	s1.getname();
 	s1.getage();
 	s1.getroll_no();
