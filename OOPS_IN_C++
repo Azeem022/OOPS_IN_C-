@@ -21,3 +21,39 @@ int main()
 	cout<<"Your roll no is :"<<s1.roll_no<<endl;
 	return 0;
 }
+
+========================================DECLARETION OF FUNCTION GETTER AND SETTER.==============================================
+#include<iostream>
+using namespace std;
+class student
+{
+	public:
+		string name;
+		int age, roll_no;
+	    // Function Getter and Setter 
+	    public:
+	    	void setname(string s)
+	    	{
+	    		name = s;
+			}
+			void setage(int a)
+			{
+				age = a;
+			}
+			void setroll_no(int a)
+			{
+				roll_no = a;
+			}
+};
+int main()
+{
+	student s1;
+	s1.setname("Mohd Azeem");
+	s1.setage(22);
+	s1.setroll_no(12);
+	cout<<"Your name is :"<<s1.name<<endl;
+	cout<<"Your age is :"<<s1.age<<endl;
+	cout<<"Your roll no is :"<<s1.roll_no<<endl;
+	return 0;
+}
+
