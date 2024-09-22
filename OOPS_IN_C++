@@ -220,3 +220,9 @@ int main()
         A4.display();
 	return 0;
 }
+
+
+//========================================DESTRUCTOR=====================================================
+1. It is an instance member function that is called autometically when object is going to be destroyed.
+2. It is a last function that is going to be called before an object is destroyed.
+3. jo hum dynamically memory lete h destructor unko release krwa deta hai.
