@@ -101,3 +101,109 @@ int main()
 2. Name of the constructor should be same as class name.
 3. It does not have any return type.
 4. It is used to initialized the value.
+
+//==================================CONSTRUCTOR WITH AND WITHOUT PARAMETERIZED ============================================
+#include<iostream>
+using namespace std;
+
+class Customer
+{
+	string name; //--------------
+	int account_number;      //  |_______________without this pointer hum isko use nhi kr skte.
+	int balance;             //  |
+	  //--------------------------                          
+	public:
+	//Default constructor
+	Customer()
+	{
+	name = "Azeem";
+	account_number = 123;
+	balance = 100;	    // if function is same but different in there parameter then this is callled as constructor overloading
+	}
+	
+	//Parameretrized Constructor
+	Customer(string a, int b, int c)
+	{
+	name = a;
+	account_number = b;
+	balance = c;	
+	}	
+	
+	Customer(string a, int b)
+	{
+		name = a;
+		account_number = b;
+	}
+	
+	void display()
+	{
+		cout<<name<<endl;
+		cout<<account_number<<endl;
+		cout<<balance<<endl;
+	}
+};
+
+int main()
+{
+	Customer A1;
+	Customer A2("Azeem",123,100);
+	Customer A3("Azeem",25);
+	
+	A1.display();
+	A2.display();
+	A3.display();
+	return 0;
+}
+
+//==================================CONSTRUCTOR WITH AND WITHOUT PARAMETERIZED AND WITH THE USE OF THIS POINTER ============================================
+#include<iostream>
+using namespace std;
+
+class Customer
+{
+	string name; //--------------
+	int account_number;      //  |_______________without this pointer hum isko use nhi kr skte.
+	int balance;             //  |
+	  //--------------------------                          
+	public:
+	//Default constructor
+	Customer()
+	{
+	name = "Azeem";
+	account_number = 123;
+	balance = 100;	    // if function is same but different in there parameter then this is callled as constructor overloading
+	}
+	
+	//Parameretrized Constructor
+	Customer(string name, int account_number, int balance)
+	{
+	this->name = name;
+	this->account_number = account_number;
+	this->balance = balance;	
+	}	
+	
+	Customer(string a, int b)
+	{
+		name = a;
+		account_number = b;
+	}
+	
+	void display()
+	{
+		cout<<name<<endl;
+		cout<<account_number<<endl;
+		cout<<balance<<endl;
+	}
+};
+
+int main()
+{
+	Customer A1;
+	Customer A2("Azeem",123,100);
+	Customer A3("Azeem",25);
+	
+	A1.display();
+	A2.display();
+	A3.display();
+	return 0;
+}
