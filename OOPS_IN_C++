@@ -69,3 +69,29 @@ int main()
 	s1.getroll_no();
 	return 0;
 }
+
+//=====================DYNAMIC MEMORY ALLOCATION BY THE USE OF POINTER =====================
+#include<iostream>
+using namespace std;
+class student
+{
+	public:
+		string name ;
+		int age, roll_number;
+		string grade;
+};
+
+int main()
+{
+	student *s = new student;
+	(*s).name = "Rohit";
+	(*s).age = 22;
+	(*s).roll_number = 12;
+	(*s).grade = "A";
+	
+	cout<<s->name<<endl;
+	cout<<s->age<<endl;
+	cout<<s->roll_number<<endl;
+	cout<<s->grade<<endl;
+	return 0;
+}
