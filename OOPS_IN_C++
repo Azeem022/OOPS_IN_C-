@@ -190,7 +190,7 @@ class Customer
 
         // Inline constructor
         inline Customer(string a, int b, int c) : name(a), account_number(b), balance(c) {}
-
+// AGR HUM INLINE CONSTRUCTOR MAI 3 PARAMETERIZED USE KR RAHE HAI TO HUM OR ALAG KAHI SAME 3 PARAMETERIZED USE NHI KR SKTE HAI
 	void display()
 	{
 		cout<<name<<endl;
