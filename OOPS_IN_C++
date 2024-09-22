@@ -95,3 +95,9 @@ int main()
 	cout<<s->grade<<endl;
 	return 0;
 }
+
+// =====================CONSTRUCTOR======================
+1. It is a special function that is callled autometically at the time of object creation 
+2. Name of the constructor should be same as class name.
+3. It does not have any return type.
+4. It is used to initialized the value.
