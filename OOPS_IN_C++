@@ -177,7 +177,7 @@ class Customer
 	//Parameretrized Constructor
 	Customer(string name, int account_number, int balance)
 	{
-	this->name = name;
+	this->name = name;  //THIS POINTER ->JO OBJECT THIS POINTER KO CALL KRTA HAI YE USKE ADDRESS KO STORE KRKE RAKHTA HAI
 	this->account_number = account_number;
 	this->balance = balance;	
 	}	
