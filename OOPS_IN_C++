@@ -197,6 +197,13 @@ class Customer
 		cout<<account_number<<endl;
 		cout<<balance<<endl;
 	}
+        // copy constructor.
+        Customer(Customer &B)
+        {
+          name = B.name;
+          account_number = B.account_number;
+          balance = B.balance;
+	}
 };
 
 int main()
@@ -208,5 +215,8 @@ int main()
 	A1.display();
 	A2.display();
 	A3.display();
+        //copy constructor call.
+        Customer A4(A3);
+        A4.display();
 	return 0;
 }
