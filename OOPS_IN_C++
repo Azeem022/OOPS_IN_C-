@@ -309,7 +309,77 @@ int main()
 //++++++++++++++++++++++++++++++++++++++++ENCAPSULATION====================================
 Encapsulation is a way of hiding the implementation details of a class from outside access and only exposing a public interface that can be used to interact with the class.
 
-//========================STATIC MEMBER FUNCTION (which is used in bank regarding money deposite and withdraw) ==================================
+//========================ENCAPSULATION ==================================
+#include<iostream>
+using namespace std;
+// STATIC FUNCTION CAN ONLY ACCESS THE STATIC MEMBER FUNCTION.
+class Customer
+{
+	string name;
+	int account_number, balance;
+	int age;
+	public:
+		
+		Customer(string name, int account_number, int balance, int age)
+		{
+			this->name = name;
+			this->account_number = account_number;
+			this->balance = balance;
+			this->age = age;
+		}
+		
+		
+		void deposit(int amount)
+		{
+			if(amount>0)
+			{
+				balance+=amount;
+			}
+			else
+			{
+				cout<<"Invalid amount\n";
+			}
+		}
+		void updateage(int age)
+		{
+			if(age>0 && age<100)
+			{
+				this->age = age;
+			}
+			else
+			{
+				cout<<"Invalid age\n";
+			}
+		}
+		
+		void withdraw(int amount)
+		{
+			if(amount<=balance && amount>0)
+			{
+				balance-=amount;
+			}
+		}
+		
+		void display()
+		{
+			cout<<name<<" "<<account_number<<" "<<balance<<" "<<age<<endl;
+		}
+		
+};
+
+int main()
+{
+	Customer A1("Rohit",10,7,4);
+	Customer A2("Mohit",2,3,2);
+	Customer A3("Sohit",3,6,4);
+	A1.updateage(24);
+	A2.deposit(1300);
+	A1.display();
+	return 0;
+}
+
+//=======================================ABSTRACTION=========================================================================
+Hiding of unessential enformation from the users this is known as Abstraction
 #include<iostream>
 using namespace std;
 // STATIC FUNCTION CAN ONLY ACCESS THE STATIC MEMBER FUNCTION.
