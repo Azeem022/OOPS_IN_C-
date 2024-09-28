@@ -449,3 +449,75 @@ int main()
 }
 
 /// INHERITANCE AND ACCESS MODIFIERS DO YOURSELF IT IS EASY BY CODDER ARMY.
+
+
+//==========================MULTIPLE INGHERITANCE===========================
+#include<iostream>
+using namespace std;
+
+class Engineer
+{
+	void money()
+	{
+		cout<<"Hello Money\n";
+	}
+	
+	public:
+	string specilization;
+	
+	Engineer()
+	{
+		cout<<"Hello Engineer\n";
+	}
+	
+	void work()
+	{
+		cout<<"I have specilization in : "<<specilization<<endl;
+	}
+};
+
+class Youtuber
+{
+	public:
+		int subscribers;
+		
+		Youtube()
+		{
+			cout<<"Hello Youtube\n";
+		}
+		void contentcreator()
+		{
+			cout<<"I have subscribers based of :"<<subscribers<<endl;
+		} 
+};
+
+class CodeTeacher: public Youtuber, public Engineer
+{
+	public:
+		string name;
+		
+		CodeTeacher()
+		{
+			cout<<"hello coder\n";
+		}
+		
+		CodeTeacher(string name, string specilization , int subscribers)
+		{
+			this->name = name;
+			this->specilization = specilization;
+			this->subscribers = subscribers;
+		}
+		
+		void showcase()
+		{
+			cout<<"My name is : "<<name<<endl;
+			work();
+			contentcreator();
+		}
+};
+
+
+int main()
+{
+	CodeTeacher();
+}
