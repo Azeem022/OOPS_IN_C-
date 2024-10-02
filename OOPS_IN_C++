@@ -521,3 +521,21 @@ int main()
 {
 	CodeTeacher();
 }
+
+
+=================================EXCEPTION HANDLING========================================
+
+An exception is an unexpected problem that arises during the execution of a program 
+our program terminates suddenly with some errors/issue . Exception occurs during the
+running of the programm.
+
+The try keywords represent a block of code that may throw an exception placed inside the 
+try block. ths followed by the one or more catch blocks. If an exception occured , try block
+throw that exception.exception.exception.
+
+The catch statement represent a block of code that is executed when a particular exception 
+is throw from the try blck. The code to handle the exception is written inside the catch block.
+
+An exception in c++ can be throw using the throw keyword . When a program encounter a throw
+statement , then it immediately terminates the current function and starts finding a match 
+catch block to handle the throw exception
